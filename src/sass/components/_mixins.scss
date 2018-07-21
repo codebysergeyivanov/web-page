@@ -1,0 +1,29 @@
+//use http://www.font2web.com to generate all font formats
+
+
+@mixin font-face($font-family, $font-folder, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+		 src: url('#{$font-folder}.eot');
+         src: url('#{$font-folder}.eot?#iefix') format('embedded-opentype'), 
+			  url('#{$font-folder}.woff') format('woff'), 
+			  url('#{$font-folder}.ttf') format('truetype');
+	}
+}
+
+@mixin bg-img($img, $pos: center center, $att: scroll) {
+	background: url($img-folder+$img);
+	background-position: $pos;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: $att;
+}
+
+
+
+@mixin transition($prop: all, $time: 0.3s, $ease: ease-in-out) {
+  transition: $prop $time $ease;
+}
+

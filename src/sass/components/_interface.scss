@@ -1,0 +1,171 @@
+//forms, buttons, dialogs etc
+.nav-list {
+	li {
+		display: inline-block;
+		margin-left: 15px;
+		a {
+			display: block;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-weight: 600;
+			border: 2px solid transparent;
+			color: #fff;
+			padding: 10px 17px;
+			line-height: 1;
+			@include transition();
+			&.active {
+				border-color: $bg-color;
+				color: $bg-color;
+			}
+			&:hover {
+				color: $bg-color;
+			}
+		} //end a
+	} //end li
+	&.black-font a {
+		color: $font;
+	}
+}
+
+// RESPONSIVE NAV
+.trigger-nav-list {
+	display: none;
+	float: right;
+	font-size: 45px;
+	line-height: 1;
+	color: #fff;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+	&:hover {
+		color: $bg-color;
+	}
+}
+
+@media (max-width: 992px) {
+	.trigger-nav-list {
+		display: block;
+	}
+	.nav-header {
+		position: relative;
+	}
+	.nav-header .nav-list {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: $overlay;
+
+		li {
+			display: block;
+			text-align: center;
+			border-bottom: 1px solid #515f67;
+			margin-left: 0;
+			a {
+				display: inline-block;
+				padding: 20px 30px;
+
+				&.active {
+					border-color: transparent;
+				}
+			} // end a
+		} // end li
+	} // end nav-list
+} // end nav-header
+
+
+// Start nav-portfolio 
+.trigger-nav-portfolio {
+	display: none;
+	float: right;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1;
+	border: 2px solid $bg-color;
+	padding: 10px 17px;
+	color: $font;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+	&:hover {
+		color: $bg-color;
+	}
+}
+
+@media (max-width: 992px) {
+	.trigger-nav-portfolio {
+		display: block;
+	}
+	.section-portfolio {
+		position: relative;
+	}
+	.nav-list {
+		display: none;
+		position: absolute;
+		top: 150px;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+		background-color: $overlay;
+		li {
+			display: block;
+			text-align: center;
+			border-bottom: 1px solid #515f67;
+			margin-left: 0;
+			a {
+				display: inline-block;
+				padding: 20px 30px;
+				&.active {
+					border-color: transparent;
+				}
+			} // end a
+		} // end li
+		&.black-font a {
+		color: #fff;
+	}
+	} // end nav-list
+	
+} // end nav-portfolio
+
+
+
+// Form
+.frm-group {
+	margin-bottom: 40px;
+}
+
+.frm-style {
+	height: 60px;
+	width: 100%;
+	border: 2px solid #fff;
+	background-color: transparent;
+	padding: 0 15px;
+}
+
+::-webkit-input-placeholder {
+	color: #fff;
+}
+
+textarea.frm-style {
+	height: 220px;
+	padding: 10px 15px;
+}
+
+label {
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+//Button
+.btn-submit {
+	padding: 25px 155px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1;
+	background-color: $bg-color;
+	border: 2px solid $bg-color;
+	transition: all .3s ease-in-out;
+	&:hover {
+		background-color: transparent;
+	}
+}

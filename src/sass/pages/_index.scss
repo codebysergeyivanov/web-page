@@ -1,0 +1,315 @@
+.header-area {
+	@include bg-img('hero-img.jpg');
+		img {
+			margin-top: (38px-23px)/2;
+		}
+}
+
+.nav-header {
+	background-color: rgba(72, 82, 90, .85);
+	padding: 60px 0;
+	.nav-list {
+		float: right;
+	}
+} //end nav-header
+.header-content {
+	margin: 250px 0;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 300;
+	font-size: 3em;
+	span {
+		background-color: rgba(72, 82, 90, .85);
+		padding: 0 20px;
+	}
+}
+
+//==SECTION
+//==============
+.heading-section {
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 2.142em;
+	line-height: 1;
+	margin-bottom: 40px;
+	&:after {
+		display: table;
+		content: '';
+		margin-top: 10px;
+		width: 45px;
+		height: 2px;
+		background-color: #fff;
+	}
+	&.black-line:after {
+		background-color: $font;
+	}
+} //end heading-services
+// Start Services
+.section-services {
+	@extend .section-padding;
+	background-color: $bg-color;
+	color: #fff;
+	font-weight: 500;
+
+	h3 {
+		text-transform: uppercase;
+		font-size: 1.714em;
+		line-height: 1;
+		margin-top: 20px;
+		margin-bottom: 15px;
+	} //end h3
+	[class^="col-"] {
+		@media (max-width: 1200px) {
+			margin-bottom: 50px;
+		}
+	} //end class
+} //end section-services
+//Start Portfolio
+.section-portfolio {
+	@extend .section-padding;
+	background: #fff;
+	.nav-list {
+		float: right;
+	}
+	.heading-section {
+		margin-bottom: 80px;
+	}
+	.thumbs-row {
+		min-height: 270px + 270px + 30px;
+		[class^="col-"] {
+			margin-top: 30px;
+		}
+		a {
+			position: relative;
+			display: block;
+			height: 270px;
+			font-size: 72px;
+			font-weight: 300;
+			color: #fff;
+			background-color: #7d7d7d;
+			opacity: .8;
+			text-align: center;
+
+			&:after {
+				position: absolute;
+				content: '+';
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				line-height: 1;
+				background-color: rgba(73, 82, 89, .8);
+				opacity: 0;
+				transition: all 0.3s ease-in-out;
+			}
+			&:hover:after {
+				opacity: 1;
+				line-height: (270/72);
+			}
+		}
+	} // end row-thums
+	.thumb-1 {
+		@include bg-img('thumb-1.jpg');
+	}
+	.thumb-2 {
+		@include bg-img('thumb-2.jpg')
+	}
+	.thumb-3 {
+		@include bg-img('thumb-3.jpg')
+	}
+	.thumb-4 {
+		@include bg-img('thumb-4.jpg')
+	}
+	.thumb-5 {
+		@include bg-img('thumb-5.jpg')
+	}
+	.thumb-5 {
+		@include bg-img('thumb-5.jpg')
+	}
+	.thumb-6 {
+		@include bg-img('thumb-6.jpg')
+	}
+	.thumb-7 {
+		@include bg-img('thumb-7.jpg')
+	}
+	.thumb-8 {
+		@include bg-img('thumb-8.jpg')
+	}
+} //end section-portfolio
+//Start Video
+.section-video {
+	@extend .section-padding;
+	background-color: #515f67;
+	color: #fff;
+	.shift-video {
+		margin-top: -81px;
+		@media (max-width: 992px) {
+			margin-top: 50px;
+		}
+	}
+}
+
+// Responsive iframe
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+// Section Button
+.section-button {
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #353f46;
+	border: 2px solid #353f46;
+	padding: 1.071em 2.857em;
+	line-height: 1;
+	transition: all .3s ease-in-out;
+	font-size: 1em; //текст при 14px в макете умещается в 3 str в 5 колонка, в браузере нет. почему?
+	&:hover {
+		color: #fff;
+		border-color: #fff;
+		text-decoration: none;
+	}
+}
+
+// Section Twitter
+.section-twitter {
+	@extend .section-padding;
+	background-color: $bg-color;
+	color: #fff;
+	.p-twitter {
+		font-size: 2em;
+		font-weight: 300;
+		margin: 0;
+	}
+	.icon-twitter-section {
+		float: right;
+	}
+	.srong {
+		font-weight: 700;
+	}
+}
+
+// Section Who Is
+.section-who-is {
+	@extend .section-padding;
+	@include bg-img('camera.jpg');
+	color: #fff;
+	.p-zerombottom {
+		margin-bottom: 0;
+	}
+}
+
+.stn-social-list {
+	li {
+		display: inline-block;
+		margin-right: 15px;
+	}
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 65px;
+		height: 65px;
+		font-size: 1.785em;
+		border: 2px solid #fff;
+		color: #fff;
+		transition: all .3s ease-in-out;
+		text-decoration: none;
+		&:hover {
+			border-color: $bg-color;
+			color: $bg-color;
+		}
+	}
+}
+
+// Start Testimonials
+.section-testimonials {
+	@extend .section-padding;
+	background-color: #fff;
+	.p-blockquote {
+		font-size: 2em;
+		font-weight: 300;
+		margin-bottom: 0;
+	}
+	cite {
+		display: block;
+		font-size: 1em;
+		font-weight: 700;
+		color: $bg-color;
+		margin-top: 40px;
+
+	}
+	.icon-quote {
+		float: right;
+	}
+}
+
+// Start Footer
+.area-footer {
+	@extend .section-padding;
+	background-color: #353f47;
+	font-size: 0.857em;
+	color: #515f67;
+	text-transform: uppercase;
+	font-weight: 700;
+	.nav-footer {
+		float: left;
+		li {
+			display: inline-block;
+			&:before {
+				content: '|';
+			}
+			&:first-child {
+			&:before {
+				content: '';
+			}
+			a {
+				padding-left: 0;
+			}
+		}
+		a {
+			display: inline-block;
+			color: inherit;
+			transition: all .3s ease-in-out;
+			padding: 0 15px;
+			line-height: 1;
+			&:hover {
+				color: $bg-color;
+				text-decoration: none;
+			}
+		} // end a
+	} // end li
+} // end nav-footer
+.copyright {
+	float: right;
+	margin-bottom: 0;
+}
+
+} // end nav-footer
+
+//Start Contact
+.section-contact {
+	@extend .section-padding;
+	@include bg-img('camera-2.jpg');
+	color: #fff;
+	font-weight: 500;
+	font-size: .95em;
+	
+	.p-contact-down {
+		margin-top: 23px;
+	}
+}
+
